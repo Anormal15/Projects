@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calendario
+    </title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="light">
+
+    <div class="calendar">
+        <div class="calendar-header">
+            <span class="month-picker" id="month-picker">Fevereiro</span>
+            <div class="year-picker">
+                <span class="year-change" id="prev-year">
+                    <pre><</pre>
+                </span>
+                <span id="year">2021</span>
+                <span class="year-change" id="next-year">
+                    <pre>></pre>
+                </span>
+            </div>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-week-day">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sáb</div>
+            </div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-footer">
+            <div class="toggle">
+                <span>Dark Mode</span>
+                <div class="dark-mode-switch">
+                    <div class="dark-mode-switch-ident"></div>
+                </div>
+            </div>
+        </div>
+        <div class="month-list"></div>
+    </div>
+
+    <div class="agenda">
+        <header id="evn">Eventos</header>
+        <div class="eventos">
+            <div id="modal" class="modal">
+                <div class="modal-content">                    
+                    <h2>Adicionar Descrição</h2>
+                    <textarea id="descricao" placeholder="Digite a descrição do evento"></textarea>
+                    <button id="add-desc">Adicionar</button>
+                    <span class="close">Fechar</span>
+                </div>
+                <div id="icon-time-content" class="icon-time-content" style="display: none;">
+                    <h2>Selecionar Ícone e Horário</h2>
+                    <div>
+                        <label for="icon-select">Escolha um ícone:</label>
+                        <select id="icon-select">
+                            <option value="🎉">🎉</option>
+                            <option value="📅">📅</option>
+                            <option value="✏️">✏️</option>
+                            <!-- Adicione mais opções de ícones conforme necessário -->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="time-select">Escolha um horário:</label>
+                        <input type="time" id="time-select">
+                    </div>
+                    <button id="save-event">Salvar</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
